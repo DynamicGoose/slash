@@ -1,0 +1,43 @@
+import { Button , ScrollView, VerticalBox} from "std-widgets.slint";
+export component Queue {
+	HorizontalLayout {
+		alignment: end;
+		Rectangle {
+			width: 50%;
+			background: #282828;
+		}
+	}
+	Rectangle { background: #282828; border-radius: 8px;}
+
+	VerticalBox {
+		padding-right: 8px;
+		HorizontalLayout {
+			height: 32px;
+			Button {
+				text: "#";
+				width: 40px;
+			}
+			Text {
+				font-size: 27px;
+				font-weight: 700;
+				horizontal-alignment: right;
+				vertical-alignment: center;
+				text: "Queue";
+			}
+		}
+		Text {
+			font-size: 22px;
+			font-weight: 700;
+			height: 32px;
+			text: "Currently Playing";
+		}
+		Image {height: 64px;}
+		Text {
+			font-size: 22px;
+			font-weight: 700;
+			height: 32px;
+			text: "Next Up";
+		}
+		ScrollView {}
+	}
+}

@@ -1,0 +1,18 @@
+import { MainView } from "mainView.slint";
+import { Library } from "library.slint";
+import { Queue } from "queue.slint";
+import { Player } from "player.slint";
+
+export component MainWindow inherits Window {
+	title: "MSM";
+	background: #0F0F0F;
+
+	VerticalLayout {
+		HorizontalLayout {
+			Library { width: 16%; }
+			MainView {}
+			Queue { width: 16%; }
+		}
+		Player {height: 96px;}
+	}
+}

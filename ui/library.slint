@@ -1,0 +1,64 @@
+import { Button , ScrollView, VerticalBox} from "std-widgets.slint";
+export component Library {
+	HorizontalLayout {
+		alignment: start;
+		Rectangle {
+			width: 50%;
+			background: #282828;
+		}
+	}
+	Rectangle { background: #282828; border-radius: 8px;}
+
+	VerticalBox {
+		padding-right: 8px;
+		HorizontalLayout {
+			height: 32px;
+			Text {
+				font-size: 27px;
+				font-weight: 700;
+				vertical-alignment: center;
+				text: "Library";
+			}
+			Button {
+				text: "#";
+				width: 40px;
+			}
+		}
+		Text {
+			font-size: 22px;
+			font-weight: 700;
+			height: 32px;
+			text: "Artists";
+		}
+		ScrollView {}
+		Text {
+			font-size: 22px;
+			font-weight: 700;
+			height: 32px;
+			text: "Albums";
+		}
+		ScrollView {}
+		Text {
+			font-size: 22px;
+			font-weight: 700;
+			height: 32px;
+			text: "Tracks";
+		}
+		ScrollView {}
+
+		HorizontalLayout {
+			height: 32px;
+			Text {
+				font-size: 22px;
+				font-weight: 700;
+				vertical-alignment: center;
+				text: "Playlists";
+			}
+			Button {
+				text: "+";
+				width: 32px;
+			}
+		}
+		ScrollView {}
+	}
+}

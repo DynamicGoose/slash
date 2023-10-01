@@ -1,0 +1,25 @@
+import { HorizontalBox } from "std-widgets.slint";
+export component Player {
+	HorizontalBox {
+		Image {
+			width: 84px;
+		}
+		VerticalLayout {
+			width: 25%;
+			Text {
+				text: "Title";
+				font-size: 16px;
+				font-weight: 700;
+			}
+			Text {
+				text: "Info";
+				font-size: 14px;
+			}
+		}
+		Text {
+			text: "Player Controls";
+			font-size: 24px;
+			font-weight: 700;
+		}
+	}
+}
