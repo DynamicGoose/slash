@@ -13,6 +13,7 @@ export component Library {
 	VerticalBox {
 		padding-right: 8px;
 		HorizontalLayout {
+			width: ToggleWidth.clicked ? 10% : 16%;
 			height: 32px;
 			Text {
 				font-size: 27px;
@@ -20,9 +21,17 @@ export component Library {
 				vertical-alignment: center;
 				text: "Library";
 			}
-			Button {
-				text: "#";
+			TggleWidth := Button {
+				text: "";
 				width: 40px;
+				clicked => {
+					if (self.text == "") {
+						self.text = "";
+					}
+					else {
+						self.text = "";
+					}
+				}
 			}
 		}
 		Text {

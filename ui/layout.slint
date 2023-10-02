@@ -2,9 +2,11 @@ import { MainView } from "mainView.slint";
 import { Library } from "library.slint";
 import { Queue } from "queue.slint";
 import { Player } from "player.slint";
+import "../fonts/Ubuntu/UbuntuNerdFont-Regular.ttf";
 
 export component MainWindow inherits Window {
 	title: "MSM";
+	default-font-family: "Ubuntu Nerd Font";
 	background: #0F0F0F;
 
 	VerticalLayout {
