@@ -1,6 +1,8 @@
 import { Button , ScrollView, VerticalBox} from "std-widgets.slint";
 
 export component Library {
+	width: 58px;
+
 	HorizontalLayout {
 		alignment: start;
 		Rectangle {
@@ -8,28 +10,29 @@ export component Library {
 			background: #282828;
 		}
 	}
-	Rectangle { background: #282828; border-radius: 8px;}
+	Rectangle { background: #282828; border-radius: 8px; }
 
 	VerticalBox {
 		padding-right: 8px;
 		HorizontalLayout {
-			width: ToggleWidth.clicked ? 10% : 16%;
 			height: 32px;
 			Text {
 				font-size: 27px;
 				font-weight: 700;
 				vertical-alignment: center;
-				text: "Library";
+				text: ToggleBar.text == "" ? "Library" : "";
 			}
-			TggleWidth := Button {
+			ToggleBar := Button {
 				text: "";
 				width: 40px;
 				clicked => {
 					if (self.text == "") {
 						self.text = "";
+						root.width = 256px;
 					}
 					else {
 						self.text = "";
+						root.width = 58px;
 					}
 				}
 			}
@@ -38,37 +41,34 @@ export component Library {
 			font-size: 22px;
 			font-weight: 700;
 			height: 32px;
-			text: "Artists";
+			text: ToggleBar.text == "" ? "󰠃 Artists" : "󰠃";
+			horizontal-alignment: ToggleBar.text == "" ? left : center;
 		}
-		ScrollView {}
 		Text {
 			font-size: 22px;
 			font-weight: 700;
 			height: 32px;
-			text: "Albums";
+			text: ToggleBar.text == "" ? "󰀥 Albums" : "󰀥";
+			horizontal-alignment: ToggleBar.text == "" ? left : center;
 		}
-		ScrollView {}
 		Text {
 			font-size: 22px;
 			font-weight: 700;
 			height: 32px;
-			text: "Tracks";
+			text: ToggleBar.text == "" ? "󰝚 Tracks" : "󰝚";
+			horizontal-alignment: ToggleBar.text == "" ? left : center;
 		}
-		ScrollView {}
-
 		HorizontalLayout {
-			height: 32px;
 			Text {
 				font-size: 22px;
 				font-weight: 700;
 				vertical-alignment: center;
-				text: "Playlists";
+				text: ToggleBar.text == "" ? "Playlists" : "";
 			}
 			Button {
-				text: "+";
-				width: 32px;
+				text: "󰐕";
+				width: 40px;
 			}
 		}
-		ScrollView {}
 	}
 }

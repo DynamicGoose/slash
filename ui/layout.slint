@@ -3,6 +3,7 @@ import { Library } from "library.slint";
 import { Queue } from "queue.slint";
 import { Player } from "player.slint";
 import "../fonts/Ubuntu/UbuntuNerdFont-Regular.ttf";
+import "../fonts/Ubuntu/UbuntuNerdFont-Bold.ttf";
 
 export component MainWindow inherits Window {
 	title: "MSM";
@@ -11,7 +12,7 @@ export component MainWindow inherits Window {
 
 	VerticalLayout {
 		HorizontalLayout {
-			Library { width: 16%; }
+			Library {}
 			MainView {}
 			Queue { width: 16%; }
 		}
