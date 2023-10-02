@@ -1,3 +1,5 @@
 fn main() {
-    slint_build::compile("ui/layout.slint").unwrap();
+    let config =slint_build::CompilerConfiguration::new().with_style("fluent-dark".into());
+    
+    slint_build::compile_with_config("ui/layout.slint", config).unwrap();
 }
