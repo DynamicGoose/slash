@@ -1,4 +1,4 @@
-# msm
+# Slash
 
 Manage music from different streaming services
 
