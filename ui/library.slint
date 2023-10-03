@@ -2,6 +2,7 @@ import { Button , ScrollView, VerticalBox} from "std-widgets.slint";
 
 export component Library {
 	width: 58px;
+	animate width { duration: 128ms; easing: ease-in-out; }
 
 	HorizontalLayout {
 		alignment: start;
@@ -59,6 +60,7 @@ export component Library {
 			horizontal-alignment: ToggleBar.text == "" ? left : center;
 		}
 		HorizontalLayout {
+			height: 32px;
 			Text {
 				font-size: 22px;
 				font-weight: 700;
@@ -70,5 +72,6 @@ export component Library {
 				width: 40px;
 			}
 		}
+		ScrollView {}
 	}
 }

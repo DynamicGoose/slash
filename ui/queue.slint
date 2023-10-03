@@ -1,6 +1,9 @@
 import { Button , ScrollView, VerticalBox} from "std-widgets.slint";
 
 export component Queue {
+	width: 58px;
+	animate width { duration: 128ms; easing: ease-in-out; }
+	
 	HorizontalLayout {
 		alignment: end;
 		Rectangle {
@@ -14,30 +17,39 @@ export component Queue {
 		padding-right: 8px;
 		HorizontalLayout {
 			height: 32px;
-			Button {
-				text: "#";
+			ToggleBar := Button {
+				text: "";
 				width: 40px;
+				clicked => {
+					if (self.text == "") {
+						self.text = "";
+						root.width = 256px;
+					}
+					else {
+						self.text = "";
+						root.width = 58px;
+					}
+				}
 			}
 			Text {
 				font-size: 27px;
 				font-weight: 700;
 				horizontal-alignment: right;
 				vertical-alignment: center;
-				text: "Queue";
+				text: ToggleBar.text == "" ? "Queue" : "";
 			}
 		}
 		Text {
 			font-size: 22px;
 			font-weight: 700;
 			height: 32px;
-			text: "Currently Playing";
+			text: ToggleBar.text == "" ? "Currently Playing" : "";
 		}
-		Image {height: 64px;}
 		Text {
 			font-size: 22px;
 			font-weight: 700;
 			height: 32px;
-			text: "Next Up";
+			text: ToggleBar.text == "" ? "Next Up" : "";
 		}
 		ScrollView {}
 	}
