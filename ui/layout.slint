@@ -25,7 +25,7 @@ component MainView {
 			searchBar := LineEdit {
 				height: 32px;
 				placeholder-text: "Search";
-				edited => { searchText = self.text; search() }
+				accepted => { searchText = self.text; search() }
 			}
 		}
 		list := ListView {
